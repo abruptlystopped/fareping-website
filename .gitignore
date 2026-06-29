@@ -1,8 +1,16 @@
 # macOS
 .DS_Store
 
-# VS Code
+# Editor folders
 .vscode/
-
-# Claude
 .claude/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Node (if you ever add a build process)
+node_modules/
