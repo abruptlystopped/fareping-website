@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://app.termly.io/resource-blocker/3a249ae2-6b6b-41ee-b109-8dacd7717abc?autoBlock=on"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Center | FarePing</title>
+<meta name="description" content="Visit the FarePing Privacy Center for privacy, cookie, and terms information, plus contact details for privacy requests and support.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fareping.app/privacy.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fareping.app/privacy.html">
+<meta property="og:title" content="Privacy Center | FarePing">
+<meta property="og:description" content="Privacy, cookie, and terms information for FarePing, plus support details for access, correction, and deletion requests.">
+<meta property="og:image" content="https://fareping.app/og-image.png">
+<meta property="og:site_name" content="FarePing">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Center | FarePing">
+<meta name="twitter:description" content="Privacy, cookie, and terms information for FarePing, plus support details for privacy requests.">
+<meta name="twitter:image" content="https://fareping.app/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    color-scheme: dark;
+    --primary: #b3c5ff;
+    --primary-container: #0066ff;
+    --surface: #10131c;
+    --surface-panel: #1d1f28;
+    --surface-low: #0b0e16;
+    --text: #e1e2ee;
+    --text-muted: #c2c6d8;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(0,102,255,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 60%, rgba(0,102,255,0.07) 0%, transparent 40%),
+      var(--surface);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--primary); }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(20px);
+    background: rgba(16,19,28,0.85);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, rgba(179,197,255,0.2), rgba(0,102,255,0.45));
+    border: 1px solid rgba(179,197,255,0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 5rem 0 3rem;
+  }
+
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--primary);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .hero p {
+    max-width: 52rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.75rem;
+  }
+
+  .button,
+  .button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    border-radius: 999px;
+    padding: 0 1.1rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .button {
+    background: var(--primary-container);
+    color: #fff;
+  }
+
+  .button-secondary {
+    background: rgba(255,255,255,0.03);
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    margin: 2.5rem 0 3rem;
+  }
+
+  .card,
+  .section-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+  }
+
+  .card {
+    grid-column: span 4;
+    padding: 1.25rem;
+  }
+
+  .card h2,
+  .section-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .card p,
+  .section-card p,
+  .section-card li {
+    color: var(--text-muted);
+  }
+
+  .sections {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .section-card {
+    padding: 1.5rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.9rem;
+  }
+
+  .status-live {
+    background: rgba(0,102,255,0.18);
+    color: var(--primary);
+  }
+
+  .status-pending {
+    background: rgba(255,255,255,0.07);
+    color: var(--text-muted);
+  }
+
+  .section-card ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .support-box {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+    background: rgba(0,102,255,0.08);
+    border: 1px solid rgba(0,102,255,0.2);
+  }
+
+  .support-form {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .form-row label {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+    font: inherit;
+    padding: 0.9rem 1rem;
+  }
+
+  .form-row textarea {
+    min-height: 9rem;
+    resize: vertical;
+  }
+
+  .form-row input::placeholder,
+  .form-row textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  .field-hint {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    align-items: center;
+  }
+
+  .form-status {
+    min-height: 1.5rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .form-status[data-state="success"] {
+    color: #9dd6a8;
+  }
+
+  .form-status[data-state="error"] {
+    color: #ffb4ab;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface-low);
+    padding: 2rem 0;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-links,
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-links a,
+  .footer-links button,
+  .social-links a {
+    color: var(--text-muted);
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .footer-note {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 860px) {
+    .card { grid-column: span 12; }
+  }
+
+  @media (max-width: 640px) {
+    nav,
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links,
+    .footer-links,
+    .social-links {
+      justify-content: flex-start;
+    }
+
+    main {
+      padding-top: 3.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">FP</span>
+        <span>FarePing</span>
+      </a>
+      <div class="nav-links">
+        <a href="privacy.html#privacy-policy">Privacy Policy</a>
+        <a href="privacy.html#cookie-policy">Cookie Policy</a>
+        <a href="privacy.html#terms-of-service">Terms</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <p class="eyebrow">Privacy Center</p>
+      <h1>Privacy, cookies, and launch-day legal basics.</h1>
+      <p>FarePing is the public marketing website for FarePing. This page is the current home for website privacy information, cookie disclosures, launch-stage terms status, and support instructions for privacy requests.</p>
+      <div class="hero-actions">
+        <a class="button" href="mailto:privacy@fareping.app">Contact Privacy Support</a>
+        <button class="button-secondary" type="button" data-cookie-preferences>Cookie Preferences</button>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Privacy overview">
+      <article class="card">
+        <h2>Privacy requests</h2>
+        <p>Email <a href="mailto:privacy@fareping.app">privacy@fareping.app</a> to request access to, correction of, or deletion of personal information associated with FarePing.</p>
+      </article>
+      <article class="card">
+        <h2>Cookie controls</h2>
+        <p>FarePing uses a Termly consent banner on public pages. Use the footer or the button on this page to review and update cookie preferences.</p>
+      </article>
+      <article class="card">
+        <h2>Future request forms</h2>
+        <p>This page reserves space for future automated privacy request forms. For launch, all requests route through the privacy support email above.</p>
+      </article>
+    </section>
+
+    <section class="sections" aria-label="Policy sections">
+      <article class="section-card" id="privacy-policy">
+        <span class="status status-pending">Policy placeholder</span>
+        <h2>Privacy Policy</h2>
+        <p>A full public privacy policy has not been published on this marketing site yet. Until that final text is posted, privacy questions and requests should be directed to <a href="mailto:privacy@fareping.app">privacy@fareping.app</a>.</p>
+        <p>Users may request access to, correction of, or deletion of personal information by email. FarePing can also use this section later for a full website privacy notice and links to any app-specific or service-specific policies.</p>
+      </article>
+
+      <article class="section-card" id="cookie-policy">
+        <span class="status status-live">Cookie controls live</span>
+        <h2>Cookie Policy</h2>
+        <p>FarePing uses Termly to present a consent banner and manage cookie preferences on public website pages. The current implementation is intended to support launch while the full long-form cookie policy text is finalized.</p>
+        <ul>
+          <li>Use the Cookie Preferences control to review or update consent choices.</li>
+          <li>Essential site technologies may remain active where required for basic site operation.</li>
+          <li>Additional policy detail can be published here later without changing site structure.</li>
+        </ul>
+      </article>
+
+      <article class="section-card" id="terms-of-service">
+        <span class="status status-pending">Coming soon</span>
+        <h2>Terms of Service</h2>
+        <p>FarePing’s final public Terms of Service are not published on this marketing site yet. This placeholder keeps navigation stable for launch and can be replaced with the final terms text when ready.</p>
+        <p>Until then, legal or policy questions can be sent to <a href="mailto:privacy@fareping.app">privacy@fareping.app</a>.</p>
+      </article>
+
+      <article class="section-card" id="privacy-support">
+        <span class="status status-live">Support</span>
+        <h2>Contact Privacy Support</h2>
+        <p>For privacy support, data questions, or requests involving access, correction, or deletion of personal information, use the form below or email <a href="mailto:privacy@fareping.app">privacy@fareping.app</a>.</p>
+        <form class="support-form" id="privacy-request-form" novalidate>
+          <div class="form-row">
+            <label for="privacy-email">Email address</label>
+            <input id="privacy-email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="privacy-request-type">Request type</label>
+            <select id="privacy-request-type" name="requestType" required>
+              <option value="">Select a request type</option>
+              <option value="access">Access</option>
+              <option value="correction">Correction</option>
+              <option value="deletion">Deletion</option>
+              <option value="other">Other privacy request</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="privacy-message">Message</label>
+            <textarea id="privacy-message" name="message" placeholder="Share any details that will help us review your request."></textarea>
+            <p class="field-hint">Privacy email remains available if you prefer not to use the form: <a href="mailto:privacy@fareping.app">privacy@fareping.app</a>.</p>
+          </div>
+
+          <div class="form-actions">
+            <button class="button" type="submit" id="privacy-request-submit">Submit request</button>
+          </div>
+          <p class="form-status" id="privacy-request-status" aria-live="polite" role="status"></p>
+        </form>
+        <div class="support-box">
+          <strong>Alternative contact:</strong>
+          <p>If you prefer, you can still email <a href="mailto:privacy@fareping.app">privacy@fareping.app</a> directly for privacy support.</p>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <strong>FarePing</strong>
+        <div class="footer-note">© 2026 BarderWorks LLC</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="privacy.html#privacy-policy">Privacy Policy</a>
+        <a href="privacy.html#cookie-policy">Cookie Policy</a>
+        <a href="privacy.html">Privacy Center</a>
+        <a href="privacy.html#terms-of-service">Terms</a>
+        <a href="#" class="termly-display-preferences">Consent Preferences</a>
+      </nav>
+    </div>
+    <div class="footer-top" style="margin-top: 1rem;">
+      <div class="social-links">
+        <a href="https://www.tiktok.com/@fareping">TikTok</a>
+        <a href="https://www.instagram.com/farepinged">Instagram</a>
+      </div>
+      <p class="footer-note">Privacy requests: <a href="mailto:privacy@fareping.app">privacy@fareping.app</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var triggers = document.querySelectorAll('[data-cookie-preferences]');
+    function openCookiePreferences() {
+      if (typeof window.displayPreferenceModal === 'function') {
+        window.displayPreferenceModal();
+        return;
+      }
+      if (window.Termly && typeof window.Termly.displayPreferenceModal === 'function') {
+        window.Termly.displayPreferenceModal();
+        return;
+      }
+      window.location.hash = 'cookie-policy';
+    }
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', openCookiePreferences);
+    });
+  })();
+
+  (function () {
+    var endpoint = 'https://us-central1-fareping-a4eb5.cloudfunctions.net/submitPrivacyRequest';
+    var form = document.getElementById('privacy-request-form');
+    var submitButton = document.getElementById('privacy-request-submit');
+    var status = document.getElementById('privacy-request-status');
+
+    if (!form || !submitButton || !status) {
+      return;
+    }
+
+    function setStatus(message, state) {
+      status.textContent = message;
+      status.setAttribute('data-state', state || '');
+    }
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(form);
+      var email = String(formData.get('email') || '').trim();
+      var requestType = String(formData.get('requestType') || '').trim();
+      var message = String(formData.get('message') || '').trim();
+
+      if (!email) {
+        setStatus('Please enter your email address.', 'error');
+        form.elements.email.focus();
+        return;
+      }
+
+      if (!requestType) {
+        setStatus('Please select a request type.', 'error');
+        form.elements.requestType.focus();
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      setStatus('Submitting your request...', '');
+
+      try {
+        var response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            requestType: requestType,
+            message: message,
+            source: 'website',
+            createdAtClient: new Date().toISOString()
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('Request failed');
+        }
+
+        form.reset();
+        setStatus("Your privacy request has been received. We'll review it and respond as soon as possible.", 'success');
+      } catch (error) {
+        setStatus("We couldn't submit your request right now. Please email privacy@fareping.app and we'll assist you directly.", 'error');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit request';
+      }
+    });
+  })();
+</script>
+</body>
+</html>
