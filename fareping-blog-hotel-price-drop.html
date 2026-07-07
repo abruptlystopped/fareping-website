@@ -368,15 +368,325 @@
     .footer-meta, .footer-social, .footer-links { gap: 0.85rem; }
   }
 </style>
+<style id="site-refresh">
+  :root {
+    --primary: #b3c5ff;
+    --primary-strong: #0066ff;
+    --surface: #10131c;
+    --text: #e1e2ee;
+    --text-muted-2: rgba(194,198,216,0.72);
+    --outline: rgba(255,255,255,0.1);
+    --outline-soft: rgba(255,255,255,0.06);
+    --glass: rgba(255,255,255,0.03);
+    --glass-soft: rgba(255,255,255,0.02);
+    --warning: #ff8d63;
+    --success: #7dd3fc;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(0,102,255,0.24) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(0,102,255,0.08) 0%, transparent 40%),
+      linear-gradient(180deg, #10131c 0%, #0b0e16 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline-color: var(--primary);
+  }
+  body > nav { display: none; }
+  body > footer:not(.site-footer) { display: none; }
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    background: rgba(16,19,28,0.82);
+    border-bottom: 1px solid var(--outline);
+  }
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 4.5rem;
+    padding: 0 1.25rem;
+  }
+  .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text) !important;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .nav-mark {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, rgba(179,197,255,0.95), rgba(0,102,255,0.95));
+    box-shadow: 0 12px 30px rgba(0,102,255,0.28);
+    flex-shrink: 0;
+  }
+  .nav-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .nav-copy small {
+    color: #c2c6d8;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .site-nav .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--primary-strong);
+    color: #f8f7ff !important;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: transform 160ms ease;
+  }
+  .site-nav .nav-cta:hover { transform: translateY(-1px); }
+  .site-main {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  .article-wrap {
+    max-width: 860px;
+    padding: 2rem 1.25rem 2.5rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--outline);
+    border-radius: 2rem;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.82rem;
+    color: #c2c6d8 !important;
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--primary) !important; }
+  .back-link::before {
+    content: '\2190';
+    color: var(--primary);
+  }
+  .article-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(0,102,255,0.12);
+    border: 1px solid rgba(179,197,255,0.16);
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    margin-bottom: 1.1rem;
+    max-width: 12ch;
+    color: #f4f6ff;
+  }
+  h1 em { color: var(--primary); }
+  .article-lede {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(225,226,238,0.84);
+    border-left: 0;
+    padding-left: 0;
+    max-width: 60ch;
+    margin-bottom: 2.4rem;
+  }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.03em;
+    margin: 3rem 0 0.9rem;
+    color: #f4f6ff;
+  }
+  h3 {
+    color: var(--primary);
+    margin: 1.85rem 0 0.55rem;
+  }
+  p, ul, ol, li, td { color: rgba(225,226,238,0.86); }
+  .callout, .script-box {
+    background: var(--glass-soft);
+    border: 1px solid var(--outline);
+    border-radius: 1.15rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+  .callout {
+    position: relative;
+    border-left: 0;
+    padding: 1.15rem 1.25rem;
+  }
+  .callout::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    border-radius: 1.15rem 0 0 1.15rem;
+    background: var(--primary);
+  }
+  .callout.warn::before { background: var(--warning); }
+  .callout strong { color: #fff; }
+  table {
+    display: block;
+    overflow-x: auto;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--outline-soft);
+    border-radius: 1.15rem;
+  }
+  th {
+    background: rgba(179,197,255,0.1) !important;
+    color: var(--primary) !important;
+    border-bottom-color: rgba(179,197,255,0.14) !important;
+    padding: 0.8rem 0.9rem !important;
+  }
+  td {
+    padding: 0.8rem 0.9rem !important;
+    border-bottom-color: rgba(255,255,255,0.06) !important;
+  }
+  .badge.yes { background: rgba(0,102,255,0.14); color: var(--primary); }
+  .badge.no { background: rgba(204,66,4,0.14); color: #ffb49a; }
+  .badge.maybe { background: rgba(125,211,252,0.14); color: var(--success); }
+  .script-box::before { color: var(--primary); }
+  .cta-block {
+    background: linear-gradient(180deg, rgba(0,102,255,0.12), rgba(0,102,255,0.05));
+    border: 1px solid rgba(179,197,255,0.16);
+    border-radius: 1.5rem;
+    text-align: left;
+  }
+  .cta-block h3 {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 1.45rem;
+  }
+  .cta-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 440px;
+    margin: 0;
+  }
+  .cta-form input,
+  .cta-form button {
+    min-height: 3rem;
+  }
+  .cta-form button {
+    background: var(--primary-strong);
+  }
+  .site-footer {
+    border-top: 1px solid var(--outline-soft);
+    padding: 2.5rem 1.25rem 3rem;
+  }
+  .site-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .footer-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+  .footer-copy small {
+    color: var(--text-muted-2);
+    font-size: 0.74rem;
+  }
+  .footer-social, .footer-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .site-footer a {
+    color: #c2c6d8;
+    text-decoration: none;
+  }
+  .site-footer a:hover,
+  .footer-cookie-button:hover {
+    color: var(--primary);
+  }
+  .footer-cookie-button {
+    background: none;
+    border: 0;
+    color: #c2c6d8;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+  }
+  .footer-note {
+    max-width: 60ch;
+    font-size: 0.78rem;
+    color: var(--text-muted-2);
+  }
+  @media (max-width: 720px) {
+    .site-nav {
+      min-height: 4rem;
+      padding: 0 1rem;
+    }
+    .nav-copy small { display: none; }
+    .site-main { padding: 1.25rem 1rem 3rem; }
+    .article-wrap {
+      padding: 1.5rem 1rem 2rem;
+      border-radius: 1.5rem;
+    }
+    .cta-form { flex-direction: column; }
+    .footer-social, .footer-links { gap: 0.85rem; }
+  }
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">Fare<span>Ping</span></a>
-  <a href="/#notify" class="nav-cta">Get early access</a>
-</nav>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-copy">
+        <span>FarePing</span>
+        <small>Price Drop Alerts</small>
+      </span>
+    </a>
+    <a href="/#notify" class="nav-cta">Get early access</a>
+  </nav>
+</header>
 
+<main class="site-main">
 <article class="article-wrap">
+  <a href="/" class="back-link">Back to homepage</a>
 
   <p class="article-meta">Hotel tips · June 2026</p>
 
@@ -522,6 +832,31 @@
   <p>Prices on a given property can change dozens of times before your check-in date. The most significant drops often happen 2–4 weeks before arrival when hotels push to fill remaining inventory, or during flash sales that the chain runs without notice. The challenge is that these windows close fast — monitoring manually means you'll miss most of them.</p>
 
 </article>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="footer-copy">
+        <span>FarePing</span>
+        <small>© 2026 BarderWorks LLC</small>
+      </span>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.tiktok.com/@fareping" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/farepinged" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="privacy.html#privacy-policy">Privacy Policy</a>
+      <a href="privacy.html#cookie-policy">Cookie Policy</a>
+      <a href="privacy.html">Privacy Center</a>
+      <a href="privacy.html#terms-of-service">Terms</a>
+      <a href="#" class="termly-display-preferences">Consent Preferences</a>
+    </nav>
+    <p class="footer-note">Privacy requests, including access, correction, and deletion, can be sent to <a href="mailto:privacy@fareping.app">privacy@fareping.app</a>.</p>
+  </div>
+</footer>
 
 <footer>
   <div class="footer-meta">
