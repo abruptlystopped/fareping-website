@@ -150,11 +150,30 @@ tailwind.config = {
   </h1>
 
   <!-- Sub -->
-  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl mx-auto">
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 md:mb-11 max-w-2xl mx-auto">
     You booked. We watch the price. You claim the savings.
   </p>
 
-  <!-- CTA: inline form + secondary button -->
+  <div class="glass-card-dim max-w-xl mx-auto mb-10 md:mb-11 rounded-3xl px-5 py-5 sm:px-6 sm:py-6 text-left shadow-[0_16px_48px_rgba(0,0,0,0.22)]">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="min-w-0">
+        <span class="inline-flex items-center rounded-full border border-primary-container/35 bg-primary-container/15 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
+          Beta is live
+        </span>
+        <h2 class="mt-3 text-xl sm:text-[1.35rem] font-semibold tracking-tight text-white">
+          Skip the waitlist.
+        </h2>
+        <p class="mt-2 text-sm sm:text-[15px] leading-relaxed text-on-surface-variant">
+          Help shape FarePing before launch.
+        </p>
+      </div>
+      <a href="https://beta.fareping.app/early" class="inline-flex h-10 sm:h-11 shrink-0 items-center justify-center rounded-full border border-primary-container/30 bg-primary-container px-4 sm:px-5 text-sm font-semibold text-white transition-all hover:opacity-85 active:scale-95 shadow-[0_0_18px_rgba(0,102,255,0.24)]">
+        Apply for the Free Beta →
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA: inline form -->
   <div id="waitlist" class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 max-w-xl mx-auto">
     <form action="https://waitlister.me/s/ELdNXY0KFuli" method="POST" class="flex flex-col sm:flex-row gap-3 w-full">
       <input
