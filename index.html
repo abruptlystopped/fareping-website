@@ -177,6 +177,15 @@ tailwind.config = {
   <div id="waitlist" class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 max-w-xl mx-auto">
     <form action="https://waitlister.me/s/ELdNXY0KFuli" method="POST" class="flex flex-col sm:flex-row gap-3 w-full">
       <input
+        type="text"
+        name="website"
+        id="website_hp_top"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden"
+      >
+      <input
         type="email"
         name="email"
         placeholder="Your email address"
@@ -372,6 +381,15 @@ tailwind.config = {
   </p>
   <form action="https://waitlister.me/s/ELdNXY0KFuli" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
     <input
+      type="text"
+      name="website"
+      id="website_hp_bottom"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+      class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden"
+    >
+    <input
       type="email"
       name="email"
       placeholder="Your email address"
@@ -412,6 +430,22 @@ tailwind.config = {
     <p class="text-center text-xs text-on-surface-variant/70">Privacy requests, including access, correction, and deletion, can be sent to <a href="mailto:privacy@fareping.app" class="hover:text-primary transition-colors">privacy@fareping.app</a>.</p>
   </div>
 </footer>
+
+<script>
+  const waitlistPageLoadTime = Date.now();
+
+  document.querySelectorAll('form[action*="waitlister.me"]').forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      const honeypot = form.querySelector('input[name="website"]');
+      const submittedTooFast = Date.now() - waitlistPageLoadTime < 3000;
+
+      if ((honeypot && honeypot.value.trim() !== "") || submittedTooFast) {
+        event.preventDefault();
+        window.location.href = "https://fareping.app/?waitlist=success";
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
